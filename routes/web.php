@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PriorityController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TaskcategoryController;
 use Illuminate\Http\Request;
@@ -29,7 +28,7 @@ Route::get('/add-taskcategory', function () {
 
 Route::post('/insert-taskcategory',[TaskcategoryController::class,'store'])->middleware(['auth']);
 
-Route::get('/all-taskcategories',[TaskcategoryController::class,'taskcategoriesData'])->middleware(['auth'])->name('all.taskcategories');
+Route::get('/all-taskcateg3ories',[TaskcategoryController::class,'taskcategoriesData'])->middleware(['auth'])->name('all.taskcategories');
 
 //Dashboard
 Route::get('/dashboard', function () {
@@ -38,14 +37,12 @@ Route::get('/dashboard', function () {
 
 //task
 
-//Route::get('tasks', '[TaskController::class, 'index']');
-//Route::post('tasks', '[TaskController::class, 'post']');
-//Route::put('tasks/{id}', '[TaskController::class, 'update']');
+Route::post('/insert-task',[TaskController::class,'store'])->middleware(['auth']);
+
+Route::get('/add-task',[TaskController::class,'create'])->middleware(['auth'])->name('add.task');
+Route::get('/all-task',[TaskController::class,'tasksData'])->middleware(['auth'])->name('all.tasks');
+
 //Route::delete('tasks/{id}', '[TaskController::class, 'delete']');
-
-//Route::resource('tasks', 'TaskController');
-
-
 
 
 //Dashboard

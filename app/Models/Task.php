@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
+
+    public function taskcategory()
+    {
+        return $this->belongsTo(Taskcategory::class);
+    }
 }
+
+
+

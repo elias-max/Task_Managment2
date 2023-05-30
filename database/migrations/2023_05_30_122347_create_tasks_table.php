@@ -17,11 +17,11 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('task');
             $table->string('description');
-            $table->string('taskcategories_name');
-            $table->boolean('status')->default(false);
-            $table->string('priority')->nullable();
-
+            $table->enum('status', ['Todo', 'Done'])->default('Todo');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 

@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Customer;
+use App\Models\Taskcategory;
 class admin extends Controller
 {
-    public function getCustomer(Request $r)
+    public function getTaskcategory(Request $r)
     {
-        $customer = Customer::find($r->id);
+        $taskcategory = Taskcategory::find($r->id);
         return response()->json([
-            'customer' => $customer,
+            'taskcategory' => $taskcategory,
             'msg' => 'success'
         ]);
     }

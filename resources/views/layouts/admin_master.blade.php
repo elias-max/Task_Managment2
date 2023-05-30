@@ -1,4 +1,4 @@
-Products<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -89,8 +89,8 @@ Products<!DOCTYPE html>
                             </a>
                             <div class="collapse" id="collapseInvoice" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="">Add new task </a>
-                                    <a class="nav-link" href="{{ URL::to('tasks/index') }}">Task List</a>
+                                    <a class="nav-link" href="{{ route('add.task') }}">Add new task </a>
+                                    <a class="nav-link" href="{{ route('all.tasks') }}">Task List</a>
                                     <a class="nav-link" href="">Completed Tasks</a>
                                     <a class="nav-link" href="">Pending tasks</a> 
                                    
@@ -110,9 +110,9 @@ Products<!DOCTYPE html>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Elias Ibisi & Prince Meghan</div>
+                            <div class="text-muted">Copyright &copy; <?php echo date("Y"); ?>  Elias Ibisi & Prince Meghan</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">All rights reserved.</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
                             </div>

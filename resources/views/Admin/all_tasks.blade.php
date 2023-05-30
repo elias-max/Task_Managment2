@@ -6,7 +6,7 @@
             <h4 class="pb-3">My Tasks</h4>
         </div>
         <div class="float-end"> 
-            <a href="{{ route('create.tasks') }}" class="btn btn-info  float-right">
+            <a href="{{ url('add-task') }}" class="btn btn-info  float-right">
                <i class="fa fa-plus-circle"></i> Create Task
             </a>
         </div>
@@ -17,9 +17,9 @@
         <div class="card mt-3">
             <h5 class="card-header">
                 @if ($task->status === 'Todo')
-                    {{ $task->title }}
+                    {{ $task->task }}
                 @else
-                    <del>{{ $task->title }}</del>
+                    <del>{{ $task->task }}</del>
                 @endif
 
                 <span class="badge rounded-pill bg-warning text-dark">
@@ -76,7 +76,7 @@
             No Task Found. Please Create one task
             <br>
             <br>
-            <a href="{{ route('create.task') }}" class="btn btn-info">
+            <a href="{{ url('create.task') }}" class="btn btn-info">
                 <i class="fa fa-plus-circle"></i> Create Task
              </a>
         </div>
